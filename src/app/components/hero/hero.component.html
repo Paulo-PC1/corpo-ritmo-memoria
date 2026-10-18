@@ -1,0 +1,12 @@
+<header class="hero">
+  <div class="w">
+    <h1>Corpo, Ritmo e Memória</h1>
+    <p class="lead">A dança como herança afro-brasileira: o que o corpo guarda da nossa história.</p>
+
+    <div class="beat" role="img" aria-label="Símbolo do Instituto Federal">
+      <i *ngFor="let tipo of simbolo; let i = index" [ngClass]="tipo" [style.--i]="i"></i>
+    </div>
+
+    <a class="btn" href="#entrevista">Assistir à entrevista</a>
+  </div>
+</header>

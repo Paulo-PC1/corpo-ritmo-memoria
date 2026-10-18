@@ -1,0 +1,14 @@
+<section id="entrevista">
+  <div class="w">
+    <h2>Conversa com o professor</h2>
+
+    <iframe *ngIf="videoSeguro" class="video" [src]="videoSeguro"
+      title="Entrevista com o professor" allowfullscreen></iframe>
+
+    <div *ngIf="!videoSeguro" class="ph video">[Aqui entra o vídeo da entrevista]</div>
+
+    <blockquote>{{ site.citacao }}</blockquote>
+
+    <p>Temas da conversa: origem do ritmo, relação com a cultura negra, preconceito, tradição e o que a dança transmite.</p>
+  </div>
+</section>

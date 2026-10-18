@@ -1,0 +1,28 @@
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  gap: 6px 18px;
+  flex-wrap: wrap;
+  padding: 12px 20px;
+  font-size: 15px;
+  font-family: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--fg);
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: var(--urucum);
+}
+
+nav strong {
+  margin-right: auto;
+  font-weight: 800;
+}

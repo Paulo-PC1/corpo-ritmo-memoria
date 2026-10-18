@@ -1,0 +1,12 @@
+<section id="saiba">
+  <div class="w">
+    <h2>Para saber mais</h2>
+    <ul class="more">
+      <li *ngFor="let item of leituras">
+        <span *ngIf="item.autor">{{ item.autor }}<span *ngIf="item.obra || item.complemento">, </span></span>
+        <i *ngIf="item.obra">{{ item.obra }}</i>
+        <span *ngIf="item.complemento">{{ item.complemento }}</span><span *ngIf="item.autor || item.complemento">.</span>
+      </li>
+    </ul>
+  </div>
+</section>

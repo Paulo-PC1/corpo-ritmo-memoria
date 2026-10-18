@@ -1,0 +1,10 @@
+<section id="historia">
+  <div class="w">
+    <h2>Uma história em ritmo</h2>
+    <ol class="tl">
+      <li *ngFor="let evento of eventos">
+        <b>{{ evento.periodo }}</b>{{ evento.texto }}
+      </li>
+    </ol>
+  </div>
+</section>

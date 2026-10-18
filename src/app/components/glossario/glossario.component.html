@@ -1,0 +1,9 @@
+<section id="glossario">
+  <div class="w">
+    <h2>Glossário</h2>
+    <details *ngFor="let item of termos">
+      <summary>{{ item.termo }}</summary>
+      <p>{{ item.definicao }}</p>
+    </details>
+  </div>
+</section>

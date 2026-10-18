@@ -1,1 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --bg: #F6F4EF; --fg: #070707; --mut: #232425;
+  --anil: #2F9E41; --dende: #f3db00; --urucum: #D9232D; --folha: #2F9E41;
+  --line: #d7e6f3; --soft: #2F9E41;
+  color-scheme: light;
+}
+
+html {
+  scroll-padding-top: 64px; /* o título da seção não fica escondido atrás da barra */
+  scroll-behavior: smooth;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 18px/1.7 "Source Serif 4", Georgia, serif;
+}
+
+h1, h2, h3 { font-family: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif; }
+
+a { color: var(--anil); }
+
+:focus-visible { outline: 3px solid var(--dende); outline-offset: 3px; }
+
+/* Container e seções (usados por vários componentes) */
+.w { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+
+section { padding: 64px 0; border-bottom: 1px solid var(--line); }
+
+h2 {
+  font-size: clamp(28px, 5vw, 40px);
+  line-height: 1.1;
+  margin: 0 0 20px;
+  font-weight: 800;
+  letter-spacing: -.01em;
+}
+
+p { max-width: 66ch; margin: 0 0 1em; }
+
+/* Caixa tracejada de espaço reservado (entrevista e galeria) */
+.ph {
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  border: 2px dashed var(--mut); border-radius: 8px;
+  color: var(--mut); padding: 16px; font-size: 16px; background: var(--soft);
+}

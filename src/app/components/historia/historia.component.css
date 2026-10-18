@@ -1,0 +1,27 @@
+ol.tl {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 22px;
+  border-left: 4px solid var(--dende);
+}
+
+ol.tl li { margin: 0 0 26px; position: relative; }
+
+/* Bolinha vermelha de cada evento, sobre a linha amarela */
+ol.tl li::before {
+  content: "";
+  position: absolute;
+  left: -31px;
+  top: 10px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 4px solid var(--urucum);
+}
+
+ol.tl b {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 20px;
+  display: block;
+}

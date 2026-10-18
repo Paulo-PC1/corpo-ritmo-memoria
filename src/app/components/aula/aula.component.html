@@ -1,0 +1,14 @@
+<section id="aula">
+  <div class="w">
+    <h2>Registro da aula</h2>
+
+    <div class="gal">
+      <ng-container *ngFor="let foto of fotos">
+        <img *ngIf="foto.src" [src]="foto.src" [alt]="foto.alt" loading="lazy">
+        <div *ngIf="!foto.src" class="ph">{{ foto.legenda }}</div>
+      </ng-container>
+    </div>
+
+    <p class="legenda">{{ site.legendaAula }}</p>
+  </div>
+</section>

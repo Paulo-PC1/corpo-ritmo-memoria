@@ -1,0 +1,53 @@
+.hero { padding: 72px 0 56px; }
+
+h1 {
+  font-size: clamp(46px, 11vw, 104px);
+  line-height: .95;
+  margin: 0 0 28px;
+  font-weight: 800;
+  letter-spacing: -.03em;
+}
+
+.lead { font-size: 22px; max-width: 36ch; color: var(--mut); }
+
+/* Fileira horizontal, como o .beat original */
+.beat {
+  display: flex;
+  gap: clamp(4px, 1.4vw, 12px);
+  margin: 36px 0 8px;
+}
+
+.beat i {
+  flex: 1;
+  aspect-ratio: 1;
+  max-width: 44px;
+  border-radius: 6px;          /* quadrado com cantos arredondados */
+  background: #2F9E41;         /* verde */
+  animation: pulse .5s ease-out both;
+  animation-delay: calc(var(--i) * 70ms);
+}
+
+/* Círculo vermelho */
+.beat i.r { background: #D9232D; border-radius: 50%; }
+
+/* Espaço entre os grupos: ocupa lugar, mas não aparece */
+.beat i.x { visibility: hidden; }
+
+/* Respeita quem desativou animações no sistema */
+@media (prefers-reduced-motion: reduce) {
+  .beat i { animation: none; }
+  html { scroll-behavior: auto; }
+}
+
+.btn {
+  display: inline-block;
+  background: var(--anil);
+  color: var(--bg);
+  padding: 12px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  font: 600 16px "Bricolage Grotesque", sans-serif;
+  margin-top: 12px;
+}
+
+.btn:hover { background: var(--urucum); }
