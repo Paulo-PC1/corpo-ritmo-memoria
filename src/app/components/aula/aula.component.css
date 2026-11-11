@@ -17,3 +17,16 @@
 .gal > :first-child { grid-column: 1 / -1; aspect-ratio: 21 / 9; }
 
 .legenda { margin-top: 18px; }
+
+/* A primeira linha inteira continua sendo do vídeo/primeira foto */
+.gal > :first-child { grid-column: 1 / -1; }
+
+/* Mesmo tamanho do vídeo da entrevista */
+.gal .video {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  border: 0;
+  border-radius: 8px;
+  background: #000;
+  object-fit: cover;   /* use "contain" se não quiser cortar o vídeo */
+}
