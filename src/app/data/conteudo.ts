@@ -53,10 +53,9 @@ export const LINHA_DO_TEMPO: EventoHistoria[] = [
 ];
 
 export const FOTOS_AULA: FotoAula[] = [
-  { src: '', alt: 'Foto principal da aula', legenda: '[Foto principal da aula]' },
-  { src: '', alt: 'Instrumentos da aula', legenda: '[Foto: instrumentos]' },
-  { src: '', alt: 'Movimento da dança', legenda: '[Foto: movimento]' },
-  { src: '', alt: 'Foto ou vídeo curto', legenda: '[Foto ou vídeo curto]' }
+  { src: 'foto1.jpg', alt: 'Foto das Alunas', legenda: '[Foto das Alunas]' },
+  { src: 'foto2.jpg', alt: 'Foto das Alunas', legenda: '[Foto das Alunas' },
+  { src: 'foto3.jpg', alt: 'Foto das Alunas', legenda: '[Foto das Alunas]' }
 ];
 
 export const GLOSSARIO: TermoGlossario[] = [
@@ -71,5 +70,4 @@ export const LEITURAS: Leitura[] = [
   { autor: 'Abdias do Nascimento', obra: 'O genocídio do negro brasileiro', complemento: '' },
   { autor: 'Kabengele Munanga', obra: 'Rediscutindo a mestiçagem no Brasil', complemento: '' },
   { autor: 'Lélia Gonzalez', obra: '', complemento: 'textos sobre cultura e identidade negra no Brasil' },
-  { autor: '', obra: '', complemento: '[Adicione filmes, documentários e músicas do ritmo estudado.]' }
 ];
