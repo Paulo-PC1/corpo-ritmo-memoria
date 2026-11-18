@@ -7,6 +7,9 @@
       <i *ngFor="let tipo of simbolo; let i = index" [ngClass]="tipo" [style.--i]="i"></i>
     </div>
 
-    <a class="btn" href="#aula">Assistir ao registro da aula</a>
+    <div class="acoes">
+      <a class="btn" href="#aula">Assistir ao registro da aula</a>
+      <a class="btn alt" routerLink="/mind-fit-club">Conhecer a Mind Fit Club</a>
+    </div>
   </div>
 </header>

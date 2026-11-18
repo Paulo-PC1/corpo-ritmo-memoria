@@ -1,0 +1,63 @@
+/* As cores e fontes desta página ficam só nela (:host), sem mexer no resto do site */
+:host {
+  --bg: #FFFFFF; --surface: #F1F8F3; --text: #10221A; --muted: #4A5F54;
+  --accent: #1B7F3C; --accent-2: #D3202F; --line: #D5E3DA; --on-accent: #FFFFFF;
+  --display: "Bricolage Grotesque", "Trebuchet MS", system-ui, sans-serif;
+  --body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  display: block;
+  min-height: 100vh;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--body);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :host {
+    --bg: #0D1A12; --surface: #15271C; --text: #F1F7F3; --muted: #A9BDB0;
+    --accent: #3DDC72; --accent-2: #FF5A5F; --line: #26402F; --on-accent: #0D1A12;
+    color-scheme: dark;
+  }
+}
+
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+.wrap { max-width: 60rem; margin: 0 auto; padding: 0 1.5rem; }
+
+/* topo */
+.hero { padding: 3.5rem 0 0; overflow: hidden; }
+.hero .wrap { display: grid; gap: 2.5rem; align-items: center; }
+.logo { width: min(15rem, 70vw); height: auto; border-radius: 50%; display: block; box-shadow: 0 0 0 6px var(--accent), 0 0 0 7px var(--bg), 0 0 0 9px var(--accent-2); }
+h1 { font-family: var(--display); font-weight: 800; font-size: clamp(2.4rem, 8vw, 4.4rem); line-height: 1.02; letter-spacing: -.02em; margin: 0 0 1rem; }
+.lead { color: var(--muted); max-width: 34rem; margin: 0 0 2rem; }
+.voltar { display: inline-block; margin-bottom: 1.25rem; color: var(--muted); font-size: .95rem; text-decoration: none; }
+.voltar:hover { color: var(--accent); text-decoration: underline; }
+.btn { display: inline-flex; align-items: center; gap: .6rem; background: var(--accent); color: var(--on-accent); font-weight: 600; text-decoration: none; padding: .95rem 1.5rem; border-radius: 999px; min-height: 3rem; }
+.btn:hover { filter: brightness(1.08); }
+@media (min-width: 48rem) { .hero .wrap { grid-template-columns: auto 1fr; gap: 4rem; } }
+
+/* ritmo: barras que pulsam uma vez ao abrir a página, depois ficam em repouso */
+.pulse { display: flex; align-items: flex-end; gap: .35rem; height: 5.5rem; margin-top: 3.5rem; padding: 0 1.5rem; }
+.pulse i { flex: 1; border-radius: .4rem .4rem 0 0; background: linear-gradient(var(--accent), var(--accent-2)); height: var(--h); transform-origin: bottom; animation: beat 1.1s cubic-bezier(.3, .7, .3, 1) both; animation-delay: calc(var(--n) * 35ms); }
+@keyframes beat { from { transform: scaleY(.08); } to { transform: scaleY(1); } }
+@media (prefers-reduced-motion: reduce) { .pulse i { animation: none; } }
+
+/* seções (o styles.css global também estiliza "section"; aqui só desfazemos o que não serve) */
+section { padding: 4rem 0; border-bottom: 0; }
+h2 { font-family: var(--display); font-weight: 800; font-size: clamp(1.7rem, 5vw, 2.4rem); line-height: 1.1; margin: 0 0 .75rem; }
+.sub { color: var(--muted); margin: 0 0 2rem; max-width: 36rem; }
+.contacts { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.contacts a { display: grid; grid-template-columns: 1fr auto; gap: .25rem 1rem; align-items: center; padding: 1.25rem .25rem; border-bottom: 1px solid var(--line); text-decoration: none; }
+.contacts a:hover { background: var(--surface); }
+.contacts b { font-family: var(--display); font-size: 1.25rem; }
+.contacts span { color: var(--muted); overflow-wrap: anywhere; }
+.contacts em { font-style: normal; font-weight: 600; color: var(--accent); }
+.prof { background: var(--surface); border-left: 6px solid var(--accent-2); border-radius: .75rem; padding: 1.75rem; }
+.prof p { margin: 0 0 1.25rem; color: var(--muted); }
+.btn.alt { background: transparent; color: var(--text); box-shadow: inset 0 0 0 2px var(--accent-2); }
+footer { padding: 2rem 0 3rem; color: var(--muted); font-size: .9rem; border-top: 1px solid var(--line); }

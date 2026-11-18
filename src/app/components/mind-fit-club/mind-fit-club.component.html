@@ -1,0 +1,45 @@
+<header class="hero">
+  <div class="wrap">
+    <img class="logo" src="mind-fit-club-logo.png" alt="Logo da Mind Fit Club" width="360" height="360">
+    <div>
+      <a class="voltar" routerLink="/">← Voltar ao projeto</a>
+      <h1>Mente e corpo no mesmo ritmo.</h1>
+      <p class="lead">A Mind Fit Club é a academia onde você treina com acompanhamento e constrói movimento, constância e memória no corpo.</p>
+      <a class="btn" [href]="whatsapp" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+    </div>
+  </div>
+
+  <div class="pulse" aria-hidden="true">
+    <i *ngFor="let barra of barras" [style.--h]="barra.altura + '%'" [style.--n]="barra.n"></i>
+  </div>
+</header>
+
+<main>
+  <section id="contato">
+    <div class="wrap">
+      <h2>Fale com a academia</h2>
+      <p class="sub">Tire dúvidas, conheça o espaço e combine sua aula experimental.</p>
+      <ul class="contacts">
+        <li *ngFor="let contato of contatos">
+          <a [href]="contato.href" [attr.target]="contato.externo ? '_blank' : null" [attr.rel]="contato.externo ? 'noopener' : null">
+            <b>{{ contato.nome }}</b><em>{{ contato.acao }}</em><span>{{ contato.detalhe }}</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="professor">
+    <div class="wrap">
+      <div class="prof">
+        <h2>Fale com o professor</h2>
+        <p>Dúvidas sobre treino, orientação e acompanhamento? Chame o professor Oliver direto no Instagram.</p>
+        <a class="btn alt" [href]="instagramProfessor" target="_blank" rel="noopener">&#64;olivergenio</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">Mind Fit Club</div>
+</footer>
