@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import { AulaComponent } from './components/aula/aula.component';
-import { EntrevistaComponent } from './components/entrevista/entrevista.component';
+//import { EntrevistaComponent } from './components/entrevista/entrevista.component';
 import { GlossarioComponent } from './components/glossario/glossario.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { HistoriaComponent } from './components/historia/historia.component';
@@ -20,7 +20,7 @@ import { SaibaMaisComponent } from './components/saiba-mais/saiba-mais.component
     ProjetoComponent,
     HistoriaComponent,
     ResistenciaComponent,
-    EntrevistaComponent,
+    //EntrevistaComponent,
     AulaComponent,
     GlossarioComponent,
     SaibaMaisComponent,

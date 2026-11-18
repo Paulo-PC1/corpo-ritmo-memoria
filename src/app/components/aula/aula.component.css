@@ -28,5 +28,5 @@
   border: 0;
   border-radius: 8px;
   background: #000;
-  object-fit: cover;   /* use "contain" se não quiser cortar o vídeo */
+  object-fit: contain;   /* use "contain" se não quiser cortar o vídeo */
 }

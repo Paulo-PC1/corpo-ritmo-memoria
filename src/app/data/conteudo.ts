@@ -24,7 +24,6 @@ export const LINKS_NAV = [
   { href: '#projeto', texto: 'O projeto' },
   { href: '#historia', texto: 'História' },
   { href: '#resistencia', texto: 'Resistência' },
-  { href: '#entrevista', texto: 'Entrevista' },
   { href: '#aula', texto: 'A aula' },
   { href: '#glossario', texto: 'Glossário' },
   { href: '#saiba', texto: 'Saiba mais' }
